@@ -1,0 +1,102 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Seleccione un ejercicio (1-20):");
+        int opcion = Convert.ToInt32(Console.ReadLine());
+        
+        if (opcion == 1)
+        {
+            Console.Write("Ingrese un número: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            if (num > 0)
+                Console.WriteLine("El número es positivo.");
+            else if (num < 0)
+                Console.WriteLine("El número es negativo.");
+            else
+                Console.WriteLine("El número es cero.");
+        }
+        else if (opcion == 2)
+        {
+            Console.Write("Ingrese un número entero: ");
+            int numParImpar = Convert.ToInt32(Console.ReadLine());
+            if (numParImpar % 2 == 0)
+                Console.WriteLine("El número es par.");
+            else
+                Console.WriteLine("El número es impar.");
+        }
+        else if (opcion == 3)
+        {
+            Console.Write("Ingrese su edad: ");
+            int edad = Convert.ToInt32(Console.ReadLine());
+            if (edad >= 18)
+                Console.WriteLine("Es mayor de edad.");
+            else
+                Console.WriteLine("Es menor de edad.");
+        }
+        else if (opcion == 4)
+        {
+            Console.Write("Ingrese un número: ");
+            int multiplo = Convert.ToInt32(Console.ReadLine());
+            if (multiplo % 5 == 0)
+                Console.WriteLine("Es múltiplo de 5.");
+            else
+                Console.WriteLine("No es múltiplo de 5.");
+        }
+        else if (opcion == 5)
+        {
+            Console.Write("Ingrese su edad: ");
+            int edadDescuento = Convert.ToInt32(Console.ReadLine());
+            if (edadDescuento > 60)
+                Console.WriteLine("Aplica para descuento.");
+            else
+                Console.WriteLine("No aplica para descuento.");
+        }
+        else if (opcion == 6)
+        {
+            Console.Write("Ingrese la calificación (0-100): ");
+            int calificacion = Convert.ToInt32(Console.ReadLine());
+            if (calificacion >= 60)
+                Console.WriteLine("Aprobado.");
+            else
+                Console.WriteLine("Reprobado.");
+        }
+        else if (opcion == 7)
+        {
+            Console.Write("Ingrese un número del 1 al 7: ");
+            int dia = Convert.ToInt32(Console.ReadLine());
+            string[] dias = {"Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"};
+            if (dia >= 1 && dia <= 7)
+                Console.WriteLine("El día es: " + dias[dia - 1]);
+            else
+                Console.WriteLine("Número inválido.");
+        }
+        else if (opcion == 8)
+        {
+            Console.Write("Ingrese dos números: ");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            if (num1 > num2)
+                Console.WriteLine("El mayor es: " + num1);
+            else if (num2 > num1)
+                Console.WriteLine("El mayor es: " + num2);
+            else
+                Console.WriteLine("Ambos números son iguales.");
+        }
+        else if (opcion == 9)
+        {
+            Console.Write("Ingrese tres números: ");
+            int n1 = Convert.ToInt32(Console.ReadLine());
+            int n2 = Convert.ToInt32(Console.ReadLine());
+            int n3 = Convert.ToInt32(Console.ReadLine());
+            int mayor = Math.Max(n1, Math.Max(n2, n3));
+            Console.WriteLine("El mayor es: " + mayor);
+        }
+        else
+        {
+            Console.WriteLine("Ejercicio no implementado todavía.");
+        }
+    }
+}
